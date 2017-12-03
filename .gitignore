@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+tmp
+my-*.js
+sample.txt
+examples/**/.djanta-rc.json
+package-lock.json
+example

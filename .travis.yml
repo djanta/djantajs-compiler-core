@@ -1,0 +1,20 @@
+dist: trusty
+language: node_js
+node_js:
+  - 7
+env:
+  global:
+    secure: Cbqu2Ml/KOxvrK67BiNgyL+wF89A2ZtJEnINWcjbVmUkBF4mp4RqYeCUkl9YB5ppgsFcemncGVDWabLfGt94zwta0p0O3C7O9qsa0252dWeaPBopzJJDB7Oo6/+Wv1JEbeJE/i3ezWxBpXqUXCGwanWsD8P4negRDUaNgDmiYKyHVYgejYNvd7YkutfGMaru3uSnZ1ercEfjlfO9Oornj2oQwUdbE7c8unArdfB2kSwBkDpDaLK3sTbIJG1YBNIsD857ejowd68PDKcptW7eKXzIjuJBRYxLImELnISK6nm8xlkEgLCPw63vhpUSRuQeuTnt2nPnAjOxA8Xq7LSwM4Bg+jfzxOS3F2quTiglT4sCUdql4Mq2FHlx4+Rvnrnold8ND7co7qOUoTZPIlJmLhpv/WsdM7SCeGcseyTg7O2XUBqChMVqLe2MXYkP746LGufVIPcx+V41stI5JfXtJoJN8FkoLJJM+TeTijJtqglmFKJJZPueuVVLQhe1JG7C4sTlC3rdFkIOwmt616I8KU2y0pWdn/rOOleGvJv6LjGF9uk1Ce+Q04nY2YC3J4UPQTL5FR1qdYPNALRcB3HQ91IRr9Uu+IjCLgD1C/MAE0sLr3b3mu1f9vkGOfW1a+6PfhWD+tql90x1ozUrMKTqOaK8sXTOuw8lcwwo78vU780=
+after_script: cat ./coverage/lcov.info | coveralls
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: npmjs@djanta.io
+  api_key:
+    secure:
+  on:
+    tags: true
+    repo: djantaio/djantajs-compiler-core
+    all_branches: true
+    node: 7
