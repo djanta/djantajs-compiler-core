@@ -95,7 +95,7 @@ grunt.initConfig({
 In your project's Gruntfile, add a section named `bundlerc` to the data object passed into `grunt.initConfig()`.
 
 ```js
-const Runtime = require ('djantajs-infinite-runtime');
+const Runtime = require ('djantajs-runtime');
 /**
  * So far, the plugin annotation might take place you class definition level as follow:
  * @plugin(
