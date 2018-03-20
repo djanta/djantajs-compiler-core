@@ -15,6 +15,6 @@ deploy:
     secure:
   on:
     tags: true
-    repo: djantaio/djantajs-compiler-core
+    repo: djanta/djantajs-compiler-core
     all_branches: true
     node: 7
