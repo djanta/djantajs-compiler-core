@@ -1,4 +1,22 @@
 
+* __Fixing the README styling__
+
+    [stanislaska](mailto:koffi.ass@gmail.com) - Tue, 20 Mar 2018 23:51:51 -0500
+    
+    
+
+* __Incrementing to version 1.0.0__
+
+    [djantaio](mailto:github@djanta.io) - Tue, 20 Mar 2018 15:02:14 -0500
+    
+    
+
+* __1.0.0__
+
+    [djantaio](mailto:github@djanta.io) - Tue, 20 Mar 2018 15:01:53 -0500
+    
+    
+
 * __updating the readme documentation__
 
     [stanislaska](mailto:koffi.ass@gmail.com) - Tue, 20 Mar 2018 14:59:52 -0500

@@ -14,7 +14,7 @@
 The djantaJS core annotation compile provide the main entry point which'll be use all across you contribution to extract and compilet your bundle annotation
 
 
-##Changelog
+## Changelog
 - v1.0.0 - Releasing the first initial version as `1.0.0` 
 
 ### Install
@@ -90,17 +90,19 @@ module.exports = class MySerializableAnnotation extends Serializable {
 ### Expected instance properties (Options)
 
 #### options.annotationName
-Type: `String`
-Default value: ``
-required: `true`
+**Type:** `Function` <br/>
+**Default value:** `` <br/>
+**Required:** `true` <br/>
 
 A string value that will difine the logical annotation name.
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+#### options.serialize
+**Type:** `Function` <br/>
+**Default value:** `` <br/>
+**Required:** `true` <br/>
 
-A string value that is used to do something else with whatever else.
+The serialize property not an instance **method** will be called at the rendering.
+
 
 ### Expected class static properties (Options)
 
