@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2018-08-07
+### Changed
+- Remove `env.global` from `.travis.yml` file
+
 ## [1.0.2] - 2018-08-07
 ### Changed
 - Introducing `snyk` for dependencies vulnerability check
