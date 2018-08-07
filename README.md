@@ -4,8 +4,8 @@
 [![npm downloads](https://img.shields.io/npm/dw/djantajs-compiler-core.svg?style=flat)](https://www.npmjs.com/package/djantajs-compiler-core)
 [![Build Status](https://travis-ci.org/djanta/djantajs-compiler-core.svg?branch=master)](https://travis-ci.org/djanta/djantajs-compiler-core)
 [![Coverage Status](https://coveralls.io/repos/github/djanta/djantajs-compiler-core/badge.svg?branch=master)](https://coveralls.io/github/djanta/djantajs-compiler-core?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/347ec3025adcdf13f7a6/maintainability)](https://codeclimate.com/github/djanta/djantajs-compiler-core/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/347ec3025adcdf13f7a6/test_coverage)](https://codeclimate.com/github/djanta/djantajs-compiler-core/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/312ea725f33a184b0464/maintainability)](https://codeclimate.com/github/djanta/djantajs-compiler-core/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/312ea725f33a184b0464/test_coverage)](https://codeclimate.com/github/djanta/djantajs-compiler-core/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/djanta/djantajs-compiler-core/badge.svg)](https://snyk.io/test/github/djanta/djantajs-compiler-core)
 
 > djantaJS initiative that help developer for auto generate the platform dependent .djanta-rc.json.
