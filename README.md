@@ -130,7 +130,7 @@ An array string value which'll be used to locate your annotation retention.
 
 ### Usage Examples
 
-#### Default Options
+#### Implementation
 
 Here's the usage of the _**MySerializableAnnotation**_
 
@@ -144,6 +144,14 @@ module.exports = class ImDeveloper {
    * @Constructor
    */
    constructor () {}
+}
+```
+
+#### Rendering result
+```json
+{
+  "name": "MyFirstAnnotation",
+  "comment": "Anything i want here or read from class property"
 }
 ```
 
