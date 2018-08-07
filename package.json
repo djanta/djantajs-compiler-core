@@ -3,13 +3,8 @@
   "description": "djanta.io initiative that help developer for auto generate the platform dependent .djanta-rc.json",
   "version": "1.0.1",
   "homepage": "https://github.com/djanta/djantajs-compiler-core",
-  "author": {
-    "name": "team.pulsar@djanta.io",
-    "email": "team.pulsar@djanta.io",
-    "url": "www.djanta.io"
-  },
   "keywords": [
-    "djanta.io",
+    "djantajs",
     "djanta",
     "annotation",
     "controller",
@@ -24,6 +19,10 @@
   "bugs": {
     "url": "https://github.com/djantaio/djantajs-compiler-core/issues"
   },
+  "author": "djantajs.team@djantajs.io",
+  "contributors": [
+    "Stanislas KOFFI ASSOUTOVI <stanislaska@djantajs.io> (https://github.com/stanislaska)"
+  ],
   "licenses": [
     {
       "type": "MIT",
@@ -33,30 +32,53 @@
   "engines": {
     "node": ">=6.0.0"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./test --reporter spec --recursive --timeout 3000 --inspect --use_strict --expose-gc --colors"
+    "test": "echo testing not yet implemented!",
+    "coverage": "npm run coverage:coveralls && npm run coverage:codeclimate",
+    "coverage:codeclimate": "./node_modules/.bin/nyc report --reporter=lcov | ./node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info",
+    "coverage:coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
+    "snyk": "./node_modules/.bin/snyk test --file=./package.json",
+    "snyk:publish": "./node_modules/.bin/snyk wizard --file=./package.json",
+    "snyk:monitor": "./node_modules/.bin/snyk monitor --file=./package.json",
+    "snyk:login": "./node_modules/.bin/snyk auth",
+    "bump-dry": "./node_modules/.bin/grunt bump --dry-run",
+    "bump": "./node_modules/.bin/grunt bump",
+    "bump-patch": "./node_modules/.bin/grunt bump:patch",
+    "bump-minor": "./node_modules/.bin/grunt bump:minor",
+    "bump-major": "./node_modules/.bin/grunt bump:major",
+    "bump-git": "./node_modules/.bin/grunt bump:git",
+    "bump-prepatch": "./node_modules/.bin/grunt bump:prepatch",
+    "bump-prerelease": "./node_modules/.bin/grunt bump:prerelease",
+    "bump-preminor": "./node_modules/.bin/grunt bump:preminor",
+    "bump-premajor": "./node_modules/.bin/grunt bump:premajor"
   },
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^3.5.0",
+    "bluebird": "^3.5.1",
     "conga-annotations": "^1.0.0",
-    "dateformat": "^2.0.0",
+    "dateformat": "^3.0.3",
     "glob": "^7.1.2",
-    "lodash": "^4.17.4",
-    "path-to-regexp": "^1.7.0",
-    "semver": "^5.3.0",
-    "string": "^3.3.3",
+    "lodash": "^4.17.10",
+    "path-to-regexp": "^2.2.1",
+    "semver": "^5.5.0",
     "url-pattern": "^1.0.3"
   },
   "devDependencies": {
     "bump": "^0.2.5",
-    "grunt": "~0.4.5",
-    "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-jshint": "^0.9.2",
-    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-bump": "^0.8.0",
+    "grunt": "~1.0.3",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^2.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.1",
-    "should": "^11.2.1"
+    "mocha": "^5.2.0",
+    "should": "^13.2.3",
+    "snyk": "^1.90.0",
+    "coveralls": "^3.0.2",
+    "codeclimate-test-reporter": "^0.5.0"
   }
 }

@@ -4,5 +4,4 @@ tmp
 my-*.js
 sample.txt
 examples/**/.djanta-rc.json
-package-lock.json
 example
