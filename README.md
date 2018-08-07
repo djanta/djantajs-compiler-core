@@ -1,21 +1,18 @@
 # djantajs-compiler-core
 
-[![Gitter][gitter-image]][gitter-url]
-[![NPM version][npm-image]][npm-url]
-[![Linux + OSX Build Status][ci-image]][ci-url]
-[![Windows Build Status][appveyor-image]][appveyor-url]
-[![Test Coverage][coverage-image]][coverage-url]
-[![Follow @djantaio on Twitter][twitter-image]][twitter-url]
+[![npm](https://img.shields.io/npm/v/djantajs-compiler-core.svg?style=flat)](https://github.com/djanta/djantajs-compiler-core)
+[![npm downloads](https://img.shields.io/npm/dw/djantajs-compiler-core.svg?style=flat)](https://www.npmjs.com/package/djantajs-compiler-core)
+[![Build Status](https://travis-ci.org/djanta/djantajs-compiler-core.svg?branch=master)](https://travis-ci.org/djanta/djantajs-compiler-core)
+[![Coverage Status](https://coveralls.io/repos/github/djanta/djantajs-compiler-core/badge.svg?branch=master)](https://coveralls.io/github/djanta/djantajs-compiler-core?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/347ec3025adcdf13f7a6/maintainability)](https://codeclimate.com/github/djanta/djantajs-compiler-core/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/347ec3025adcdf13f7a6/test_coverage)](https://codeclimate.com/github/djanta/djantajs-compiler-core/test_coverage)
+[![Known Vulnerabilities](https://snyk.io/test/github/djanta/djantajs-compiler-core/badge.svg)](https://snyk.io/test/github/djanta/djantajs-compiler-core)
 
-> djantaJS core annotation compiler bundle.
+> djantaJS initiative that help developer for auto generate the platform dependent .djanta-rc.json.
 
 ## Getting Started
 
-The djantaJS core annotation compile provide the main entry point which'll be use all across you contribution to extract and compilet your bundle annotation
-
-
-## Changelog
-- v1.0.0 - Releasing the first initial version as `1.0.0` 
+The djantajs core annotation compile provide the main entry point which'll be use all across you contribution to extract and compilet your bundle annotation
 
 ### Install
 
@@ -26,10 +23,10 @@ npm i djantajs-compiler-core --save-dev
 Once the plugin has been installed, it may be able to require any of provided tools as follow:
 
 ```js
-let {Compiler, Handler, Serializable, Annotation} = require('djantajs-compiler-core')
+let { Compiler, Handler, Serializable, Annotation } = require('djantajs-compiler-core')
 ```
 
-or as follow: 
+or as follow to import the module context: 
 
 ```js
 let compiler = require('djantajs-compiler-core')
@@ -37,14 +34,16 @@ let compiler = require('djantajs-compiler-core')
 
 ## Usage
 
-### How to implement your annotation
+### How to implement a specific annotation
 This component has provided the easiest way to implement your own annotation component. Therefore, you'll simply need to implelent the given interface 
 
 ```js
 let { Annotation, Serializable } = require('djantajs-compiler-core');
-
+/**
+ * Default class level documentation
+ * @type MySerializableAnnotation
+ */
 module.exports = class MySerializableAnnotation extends Serializable {
-  
   /**
    * The possible target retention
    *
@@ -61,22 +60,38 @@ module.exports = class MySerializableAnnotation extends Serializable {
    * @param {{}} data the annotation input data extracted from the target source
    * @param {string} filePath the source file where the annotation data has been extracted from
    */
-  constructor (data, filePath){
+  constructor (data, filePath) {
     super(data, filePath)
   }
   
+  /**
+   * This method is mandatory and must return the given annotation litteral name
+   * @return {string} Returns the annotation name.
+   */
   get annotationName () {
     return 'MySerializableAnnotation';
   }
   
+  /**
+   * User provided property with aim to set the <code>name</code> property throught the annotation
+   * @param {string} name the given annotation name.
+   */
   set name (name) {
     this._name = name;
   }
   
+  /**
+   * Returns the annotation <code>name</code> property set throught the annotation
+   * @return {string} Returns the <code>name</code> property set via the annotation
+   */
   get name () {
     return this._name;
   }
   
+  /**
+   * Mandatory rendered method which must return the annottion serialized context
+   * @return {*} Returns the annotation serialized context.
+   */
   get serialize () {
     let self = this;
     return {
@@ -90,14 +105,14 @@ module.exports = class MySerializableAnnotation extends Serializable {
 ### Expected instance properties (Options)
 
 #### options.annotationName
-**Type:** `Function` <br/>
+**Type:** `Property` <br/>
 **Default value:** `` <br/>
 **Required:** `true` <br/>
 
 A string value that will difine the logical annotation name.
 
 #### options.serialize
-**Type:** `Function` <br/>
+**Type:** `Property` <br/>
 **Default value:** `` <br/>
 **Required:** `true` <br/>
 
@@ -107,24 +122,36 @@ The serialize property not an instance **method** will be called at the renderin
 ### Expected class static properties (Options)
 
 #### targets
-Type: `Array`
-Default value: `[Annotation.DEFINITION, Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD]`
-required: `true`
+Type: `Array`<br/>
+Default value: `[Annotation.DEFINITION, Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD]`<br/>
+required: `true`<br/>
 
 An array string value which'll be used to locate your annotation retention.
 
 ### Usage Examples
 
-#### Default Options
+#### Implementation
 
-Here's how developers can use your annotion contribution
+Here's the usage of the _**MySerializableAnnotation**_
 
 ```js
 /**
  * @MySerializableAnnotation(name='MyFirstAnnotation')
  */
 module.exports = class ImDeveloper {
+  /**
+   * Qualified default class constructor
+   * @Constructor
+   */
    constructor () {}
+}
+```
+
+#### Rendering result
+```json
+{
+  "name": "MyFirstAnnotation",
+  "comment": "Anything i want here or read from class property"
 }
 ```
 
@@ -134,15 +161,12 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 * Fork repository
 * Update source code
-* Update README.md change log
+* Update README.md and the changelog.md
 
 ## Versioning
 This package will be maintained under the Semantic Versioning guidelines as much as possible. Releases will be numbered with the following format:
 
-`<major>.<minor>.<patch>`
-
-## Release History
-_(Nothing yet)_
+_`<major>.<minor>.<patch>`_
 
 ## License
 
