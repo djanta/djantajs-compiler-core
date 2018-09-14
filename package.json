@@ -1,7 +1,7 @@
 {
   "name": "@djanta/djantajs-compiler-core",
   "description": "djanta.io initiative that help developer for auto generate the platform dependent .djanta-rc.json",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "homepage": "https://github.com/djanta/djantajs-compiler-core",
   "keywords": [
     "djantajs",
