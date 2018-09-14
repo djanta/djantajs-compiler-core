@@ -54,7 +54,9 @@
     "bump-prepatch": "./node_modules/.bin/grunt bump:prepatch",
     "bump-prerelease": "./node_modules/.bin/grunt bump:prerelease",
     "bump-preminor": "./node_modules/.bin/grunt bump:preminor",
-    "bump-premajor": "./node_modules/.bin/grunt bump:premajor"
+    "bump-premajor": "./node_modules/.bin/grunt bump:premajor",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "license": "MIT",
   "dependencies": {
@@ -65,7 +67,8 @@
     "lodash": "^4.17.10",
     "path-to-regexp": "^2.2.1",
     "semver": "^5.5.0",
-    "url-pattern": "^1.0.3"
+    "url-pattern": "^1.0.3",
+    "snyk": "^1.95.3"
   },
   "devDependencies": {
     "bump": "^0.2.5",
@@ -77,8 +80,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0",
     "should": "^13.2.3",
-    "snyk": "^1.90.0",
     "coveralls": "^3.0.2",
     "codeclimate-test-reporter": "^0.5.0"
-  }
+  },
+  "snyk": true
 }
