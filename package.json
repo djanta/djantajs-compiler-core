@@ -1,7 +1,7 @@
 {
   "name": "@djanta/djantajs-compiler-core",
   "description": "djanta.io initiative that help developer for auto generate the platform dependent .djanta-rc.json",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "homepage": "https://github.com/djanta/djantajs-compiler-core",
   "keywords": [
     "djantajs",
@@ -37,7 +37,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "echo testing not yet implemented!",
+    "test": "echo NYI!",
     "coverage": "npm run coverage:coveralls && npm run coverage:codeclimate",
     "coverage:codeclimate": "./node_modules/.bin/nyc report --reporter=lcov | ./node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info",
     "coverage:coveralls": "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/coveralls/bin/coveralls.js",
@@ -45,16 +45,6 @@
     "snyk:publish": "./node_modules/.bin/snyk wizard --file=./package.json",
     "snyk:monitor": "./node_modules/.bin/snyk monitor --file=./package.json",
     "snyk:login": "./node_modules/.bin/snyk auth",
-    "bump-dry": "./node_modules/.bin/grunt bump --dry-run",
-    "bump": "./node_modules/.bin/grunt bump",
-    "bump-patch": "./node_modules/.bin/grunt bump:patch",
-    "bump-minor": "./node_modules/.bin/grunt bump:minor",
-    "bump-major": "./node_modules/.bin/grunt bump:major",
-    "bump-git": "./node_modules/.bin/grunt bump:git",
-    "bump-prepatch": "./node_modules/.bin/grunt bump:prepatch",
-    "bump-prerelease": "./node_modules/.bin/grunt bump:prerelease",
-    "bump-preminor": "./node_modules/.bin/grunt bump:preminor",
-    "bump-premajor": "./node_modules/.bin/grunt bump:premajor",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
@@ -68,7 +58,7 @@
     "path-to-regexp": "^2.2.1",
     "semver": "^5.5.0",
     "url-pattern": "^1.0.3",
-    "snyk": "^1.90.0"
+    "snyk": "^1.95.3"
   },
   "devDependencies": {
     "bump": "^0.2.5",
