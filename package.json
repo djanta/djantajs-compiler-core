@@ -7,10 +7,8 @@
     "djantajs",
     "djanta",
     "annotation",
-    "controller",
-    "es6",
-    "es2015",
-    "es7"
+    "djantaio",
+    "compiler"
   ],
   "repository": {
     "type": "git",
