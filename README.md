@@ -17,19 +17,19 @@ The djantajs core annotation compile provide the main entry point which'll be us
 ### Install
 
 ```shell
-npm i djantajs-compiler-core --save-dev
+npm i @djanta/djantajs-compiler-core --save[-S]
 ```
 
 Once the plugin has been installed, it may be able to require any of provided tools as follow:
 
 ```js
-let { Compiler, Handler, Serializable, Annotation } = require('djantajs-compiler-core')
+let { Compiler, Handler, Serializable, Annotation } = require('@djanta/djantajs-compiler-core')
 ```
 
 or as follow to import the module context: 
 
 ```js
-let compiler = require('djantajs-compiler-core')
+let compiler = require('@djanta/djantajs-compiler-core')
 ```
 
 ## Usage
@@ -38,7 +38,7 @@ let compiler = require('djantajs-compiler-core')
 This component has provided the easiest way to implement your own annotation component. Therefore, you'll simply need to implelent the given interface 
 
 ```js
-let { Annotation, Serializable } = require('djantajs-compiler-core');
+let { Annotation, Serializable } = require('@djanta/djantajs-compiler-core');
 /**
  * Default class level documentation
  * @type MySerializableAnnotation
