@@ -24,7 +24,7 @@ after_success:
   - npm run snyk:monitor
   - npm run coverage
 before_deploy:
-  - bash ~/travis-npm-deploy/deploy.sh login --user=$NPM_USER --password=$NPM_PWD --email=$NPM_EMAIL --scope=$NPM_SCOPE
+  - bash ~/travis-npm-deploy/deploy.sh login --user=$NPM_USER --password=$NPM_PWD --email=$NPM_EMAIL #--scope=$NPM_SCOPE
 deploy:
   - provider: script
     skip_cleanup: true
