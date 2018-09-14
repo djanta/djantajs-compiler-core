@@ -1,7 +1,7 @@
 # djantajs-compiler-core
 
-[![npm](https://img.shields.io/npm/v/djantajs-compiler-core.svg?style=flat)](https://github.com/djanta/djantajs-compiler-core)
-[![npm downloads](https://img.shields.io/npm/dw/djantajs-compiler-core.svg?style=flat)](https://www.npmjs.com/package/djantajs-compiler-core)
+[![npm](https://img.shields.io/npm/v/@djanta/djantajs-compiler-core.svg?style=flat)](https://www.npmjs.com/package/@djanta/djantajs-compiler-core)
+[![npm downloads](https://img.shields.io/npm/dw/djantajs-compiler-core.svg?style=flat)](https://www.npmjs.com/package/@djanta/djantajs-compiler-core)
 [![Build Status](https://travis-ci.org/djanta/djantajs-compiler-core.svg?branch=master)](https://travis-ci.org/djanta/djantajs-compiler-core)
 [![Coverage Status](https://coveralls.io/repos/github/djanta/djantajs-compiler-core/badge.svg?branch=master)](https://coveralls.io/github/djanta/djantajs-compiler-core?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/312ea725f33a184b0464/maintainability)](https://codeclimate.com/github/djanta/djantajs-compiler-core/maintainability)

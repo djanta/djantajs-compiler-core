@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.7] - 2018-09-14
+### Remove
+- Remove `--scope=$NPM_SCOPE` from `.travis.yml` file
+
 ## [1.0.3] - 2018-08-07
 ### Changed
 - Remove `env.global` from `.travis.yml` file
@@ -37,7 +41,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial public version publication.
 - Fixing travis configuration *skip_cleanup: true*
 
-[Unreleased]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.3...HEAD
+[Unreleased]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.6...v1.0.7
+[1.0.6]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.2...v1.0.6
 [1.0.2]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/djanta/djantajs-compiler-core/compare/v1.0.0...v1.0.1
